@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="header">
+
+			</div>
+		</header>
+		<div class="contentDiv" id="contentDiv">
+			<div class="startDiv" id="startDiv">
+				<button onclick="startGame()" id="btnS">开始游戏</button>
+				<button onclick="userRecord()" id="btnR">个人记录</button>
+				<button onclick="worldRecord()" id="btnWR">世界纪录</button>
+			</div>
+			<div class="mainDiv" id="mainDiv">
+				<div class="scoreDiv" id="scoreDiv">
+					<label>分数: </label>
+					<label id="num" class="num">0</label>
+				</div>
+
+				<div class="recordDiv" id="recordDiv">
+					<label>个人记录: </label>
+					<label id="top" class="top">0</label>
+				</div>
+
+				<div class="recordTop" id="worldDiv">
+					<label>世界纪录: </label>
+					<label id="worldTop" class="wroldTop">0</label>
+				</div>
+
+				<div class="suspendDiv" id="suspendDiv">
+					<!--<button>返回游戏</button><br>-->
+					<button>开始</button><br>
+					<button>回到主页</button><br>
+				</div>
+				<div class="endDiv" id="endDiv">
+					<p class="planText">飞机大战分数</p>
+					<p id="planScore">0</p>
+					<div>
+						<button onclick="updateRecord(scores)">上传分数</button>
+						<button onclick="goOn()">继续</button>
+						<button id="revival">复活</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rightDiv" id="rightDiv">
+			<ul>
+				<li>推荐运行环境：Chrome 66 </li>
+				<li>请启用WebExtensionWallet插件</li>
+				<li>在主页面点击世界纪录查看世界最高纪录</li>
+				<li>在主页面点击个人记录查看玩家最高纪录</li>
+				<li>点击开始后，移动鼠标控制飞机飞行</li>
+				<li>左上角为分数情况</li>
+				<li>开始游戏后点击可以暂停</li>
+				<li>游戏结束后，点击上传分数，花费0.0001NAS进行分数的上传</li>
+				<li>游戏结束后，点击继续返回主页面</li>
+				<li>游戏结束后，点击复活，花费0.001NAS复活</li>
+			</ul>
+		</div>
+		<footer>
+			Design by Yang<br>
+			Powered by Nebulasio
+		</footer>
+
+	</div>
+	<script src=lib/jquery-3.3.1.min.js></script>
+	<script type="text/javascript" src="lib/nebulas.js"></script>
+	<script type="text/javascript" src="lib/nebPay.js"></script>
+	<script type="text/javascript" src="js/page.js"></script>
+</body>
+</html>
