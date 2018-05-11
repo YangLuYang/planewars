@@ -24,8 +24,14 @@ footer {
     position: absolute;
     bottom: 20px;
     left: 50%;
-    width: 166px;
-    margin-left: -83px;
+    width: 250px;
+    text-align: center;
+    margin-left: -100px;
+}
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
 }
 .contentDiv{
     /*position: absolute;*/

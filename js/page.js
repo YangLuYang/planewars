@@ -2,7 +2,7 @@
 var NebPay = require("nebpay");
 var nebPay = new NebPay();
 
-var dappAddress = "n1fw66wvTx5BSiRCsWY3b8HQBNUtYyG97c8";
+var dappAddress = "n1pggpN57KvgBFkSqgPrPRgpc4QcAPphDBo";
 
 var contetnDiv = document.getElementById("contentDiv");
 // 获得开始界面
@@ -34,6 +34,7 @@ var isStart = false;
 var worldR;
 var worldAdd;
 var userR;
+//
 // if(typeof(webExtensionWallet) === "undefined"){
 //     alert("请配合WebExtensionWallet使用")
 // }
@@ -83,7 +84,7 @@ function getWorldRecord(resp) {
         worldAdd = record.address;
     }
     if(!isStart){
-        alert("世界纪录保持者为:"+worldAdd+", 分数为:"+worldR);
+        alert("世界纪录保持者为:"+worldAdd+"\n分数为:"+worldR);
     }
     worldDiv.innerHTML = "世界纪录:"+worldR;
 }
@@ -207,8 +208,6 @@ this.border = function(){
     var bodyObjX = e.clientX-contetnDiv.offsetLeft;
 	var bodyObjY = e.clientY-contetnDiv.offsetTop;
 	//超出边界 ，取消移动世界，反之 加上
-    // console.log(mainDiv.offsetLeft+" "+mainDiv.offsetTop)
-    // console.log(bodyObjX+" "+bodyObjY);
 	if(bodyObjX < 0 || bodyObjX > 320 || bodyObjY < 0 || bodyObjY > 568){
 		if(document.removeEventListener){
 			mainDiv.removeEventListener("mousemove", move, true);
